@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "CommonJS", //Con el module le pido que use ese sistema de módulos, para que no haya problemas al hacer yarn build y yarn start con los imports
+    "moduleResolution": "Node",
+    "outDir": "be-dist",
+    "strict": true,
+    // "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["be-src/**/*.ts"], //todos los archivos van a ser traspilados a js
+  "exclude": ["node_modules"]
+}

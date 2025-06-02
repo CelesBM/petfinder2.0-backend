@@ -1,0 +1,7 @@
+.parcel-cache
+be-dist
+fe-dist
+node_modules
+.env
+dist
+yarn-error.log

@@ -1,0 +1,44 @@
+{
+  "name": "pet-finder",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev:be": "nodemon --watch ./be-src/index.ts --exec ts-node ./be-src/index.ts",
+    "build:be": "tsc",
+    "start": "node ./be-dist/index.js"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.4",
+    "@types/cors": "^2.8.17",
+    "@types/dropzone": "^5.7.9",
+    "@types/express": "^5.0.1",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^22.14.0",
+    "@types/pg": "^8.11.11",
+    "algoliasearch": "^4.24.0",
+    "body-parser": "^2.2.0",
+    "buffer": "^6.0.3",
+    "cloudinary": "^2.6.0",
+    "cors": "^2.8.5",
+    "crypto-browserify": "^3.12.1",
+    "dotenv": "^16.4.7",
+    "events": "^3.3.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.1.9",
+    "parcel": "^2.14.4",
+    "pg": "^8.14.1",
+    "pg-hstore": "^2.3.4",
+    "process": "^0.11.10",
+    "sequelize": "^6.37.7",
+    "stream-browserify": "^3.0.0",
+    "typescript": "^5.8.3",
+    "util": "^0.12.5",
+    "vm-browserify": "^1.1.2"
+  },
+  "devDependencies": {
+    "@types/algoliasearch": "^4.0.4",
+    "ts-node": "^10.9.2",
+    "webpack-dev-server": "^5.2.1"
+  }
+}
