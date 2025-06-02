@@ -5,7 +5,8 @@
   "scripts": {
     "dev:be": "nodemon --watch ./be-src/index.ts --exec ts-node ./be-src/index.ts",
     "build:be": "tsc",
-    "start": "node ./be-dist/index.js"
+    "start": "node ./be-dist/index.js",
+    "heroku-postbuild": "npm run build:be"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.4",
