@@ -6,6 +6,8 @@ import * as pg from "pg";
 import * as dotenv from "dotenv";
 dotenv.config();
 
+console.log("SEQUELIZE_URL:", process.env.SEQUELIZE_URL);
+
 if (!process.env.SEQUELIZE_URL) {
   throw new Error("SEQUELIZE_URL no está definida");
 }
