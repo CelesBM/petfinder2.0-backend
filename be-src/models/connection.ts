@@ -1,4 +1,4 @@
-import { Error, Sequelize } from "sequelize";
+import { Sequelize } from "sequelize";
 import { v2 as cloudinary } from "cloudinary";
 import algoliasearch from "algoliasearch";
 
@@ -6,7 +6,11 @@ import * as pg from "pg";
 import * as dotenv from "dotenv";
 dotenv.config();
 
-export const sequelize = new Sequelize(process.env.SEQUELIZE_URL as string, {
+if (!process.env.SEQUELIZE_URL) {
+  throw new Error("SEQUELIZE_URL no está definida");
+}
+
+export const sequelize = new Sequelize(process.env.SEQUELIZE_URL, {
   dialect: "postgres",
   dialectModule: pg,
   dialectOptions: {
