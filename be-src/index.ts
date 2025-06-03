@@ -1,5 +1,6 @@
 import express from "express";
 import { sequelize } from "./models/connection";
+import "./models/connection"; // o donde tengas la conexión
 import { Request, Response } from "express";
 import * as dotenv from "dotenv";
 import cors from "cors";
@@ -40,6 +41,8 @@ app.use(
     allowedHeaders: "Content-Type, Authorization",
   })
 );
+
+console.log("En index.ts - SEQUELIZE_URL:", process.env.SEQUELIZE_URL);
 
 //sequelize.sync({ alter: true }).then(() => {
 //  console.log("Base de datos sincronizada");
