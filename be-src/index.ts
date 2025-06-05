@@ -36,9 +36,13 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 //Middleware para agregar los encabezados necesarios en las respuestas HTTP, para permitir solicitudes entre diferentes dominios:
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:5174"],
+    origin: [
+      "http://localhost:3000", // local backend
+      "http://localhost:5174", // local frontend
+      "https://petfinder-d943d.web.app", // frontend deployado en Firebase
+    ],
     methods: "GET, POST, PUT, DELETE, OPTIONS",
-    allowedHeaders: "Content-Type, Authorization",
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
